@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Envio de Correos</title>
+</head>
+<body>
+	<form method="post" action="{% url 'EnvioCorreo' %}">  
+		{% csrf_token %}
+
+		<h1>Envio de Correos</h1>
+		<label>Correo Receptor: </label>  <input type="text" name="InputDirCorreo">
+		<input type="submit" value="Enviar">
+
+	</form>
+</body>
+</html>
